@@ -4,7 +4,6 @@
 import mongoose, { Document, Schema } from 'mongoose';
 
 export interface IUser extends Document {
-  userId: string;
   username: string;
   email: string;
   password: string;
@@ -15,8 +14,12 @@ export interface IUser extends Document {
 
 const userSchema: Schema = new Schema(
   {
-    userId: { type: String, required: true, unique: true },
-    username: { type: String, required: true, unique: true, trim: true },
+    username: { 
+      type: String, 
+      required: true, 
+      unique: true, 
+      trim: true 
+    },
     email: {
       type: String,
       required: true,
@@ -28,19 +31,28 @@ const userSchema: Schema = new Schema(
         message: 'Please provide a valid email'
       },
     },
-    password: { type: String, required: true, minlength: 8 },
-    isVerified: { type: Boolean, default: false },
+    password: { 
+      type: String, 
+      required: true, 
+      minlength: 8 
+    },
+    isVerified: { 
+      type: Boolean, 
+      default: false 
+    },
   },
-  { timestamps: true }
+  { 
+    timestamps: true // Menambahkan createdAt dan updatedAt secara otomatis
+  }
 );
 
-// Indexing
+// Indexing untuk memastikan `email`, dan `username` unik
 userSchema.index({ email: 1, username: 1 }, { unique: true });
 
-// Remove sensitive data from JSON output
+// Menambahkan method untuk menghapus data sensitif (misalnya password)
 userSchema.methods.toJSON = function () {
   const user = this.toObject();
-  delete user.password;
+  delete user.password; // Menghapus password dari output JSON
   return user;
 };
 
