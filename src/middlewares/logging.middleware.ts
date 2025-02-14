@@ -1,5 +1,5 @@
 
-// utils/loggingMiddleware.ts
+// utils/logging.middleware.ts
 
 import { Request, Response, NextFunction } from 'express';
 import { logger } from '../utils/logger';  // Pastikan Anda sudah mengkonfigurasi logger dengan winston

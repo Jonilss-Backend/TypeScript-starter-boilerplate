@@ -1,5 +1,5 @@
 
-// services/userService.ts
+// services/user.service.ts
 
 import { User, IUser } from '../models/user'; // Mengimpor IUser dari model User
 import { logError } from '../utils/logger';

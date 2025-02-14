@@ -1,7 +1,7 @@
 
-// services/__tests__/userService.test.ts
+// services/__tests__/user.service.test.ts
 
-import userService from '../userService';
+import userService from '../user.service';
 import { User, IUser } from '../../models/user'; // Mengimpor interface IUser dari model
 import mongoose from 'mongoose';
 

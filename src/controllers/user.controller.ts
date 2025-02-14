@@ -1,8 +1,8 @@
 
-// controllers/userController.ts
+// controllers/user.controller.ts
 
 import { Request, Response } from 'express';
-import userService from '../services/userService';
+import userService from '../services/user.service';
 import { logError } from '../utils/logger';
 
 class UserController {

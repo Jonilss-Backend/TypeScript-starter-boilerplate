@@ -4,7 +4,7 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import app from './app'; // Mengimport aplikasi dari app.ts
-import { connectDB } from './config/dbConfig'; // Fungsi untuk menghubungkan ke database
+import { connectDB } from './config/db.config'; // Fungsi untuk menghubungkan ke database
 
 dotenv.config(); // Memuat variabel environment dari file .env
 

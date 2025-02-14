@@ -1,5 +1,5 @@
 
-// config/databaseConfig.ts
+// config/db.config.ts
 
 import mongoose from 'mongoose';
 

@@ -1,5 +1,5 @@
 
-// middlewares/corsMiddleware.ts
+// middlewares/cors.middleware.ts
 
 import { Request, Response, NextFunction } from 'express';
 

@@ -5,10 +5,10 @@ import express, { Application } from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';  
 import routes from './routes';  // Pastikan routes sudah ada
-import { errorHandlingMiddleware } from './middlewares/errorHandlingMiddleware';  // Penanganan error kustom
-import { loggingMiddleware } from './middlewares/loggingMiddleware';  // Middleware untuk logging
-import { corsMiddleware } from './middlewares/corsMiddleware';  // Middleware untuk CORS
-//import { authMiddleware } from './middlewares/authMiddleware';  // Middleware untuk autentikasi
+import { errorHandlingMiddleware } from './middlewares/errorHandling.middleware';  // Penanganan error kustom
+import { loggingMiddleware } from './middlewares/logging.middleware';  // Middleware untuk logging
+import { corsMiddleware } from './middlewares/cors.middleware';  // Middleware untuk CORS
+//import { authMiddleware } from './middlewares/auth.middleware';  // Middleware untuk autentikasi
 
 /**
  * Menginisialisasi aplikasi Express.
